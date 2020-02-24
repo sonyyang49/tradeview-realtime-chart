@@ -25,15 +25,10 @@ class App extends React.Component {
           <h1>Real Time Chart Test</h1>
         </header>
 
-        <div className="row chart-container">
-          <div className="col-lg-6 chart">
+        <div>
+
             <TVChartContainer />
-          </div>
-          <div className="col-lg-6 select-token">
-            <button type="button" onClick={this.onClickABCT}>ABCT</button>
-            <button type="button" onClick={this.onClickOTBC}>OTBC</button>
-            <button type="button" onClick={this.onClickWIN}>WIN</button>
-          </div>
+
         </div>
 
         

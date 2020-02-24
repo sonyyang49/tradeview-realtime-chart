@@ -73,12 +73,41 @@ class TVChartContainer extends React.PureComponent {
       console.log("Chart has loaded!");
     });
 
+    
+
   }
 
+  onClickABCT = () => {
+    //use this to change the symbol.  
+    this.tvWidget.chart().setSymbol("abct");
+  }
+  onClickOTBC = () => {
+    //use this to change the symbol.  
+    this.tvWidget.chart().setSymbol("otbc");
+  }
+  onClickWIN = () => {
+    //use this to change the symbol.  
+    this.tvWidget.chart().setSymbol("win");
+  }
 
   render() {
     return (
-      <div id={this.state.containerId} />
+      <div>
+
+        <div className="row chart-container">
+          <div className="col-lg-6 chart">
+            <div id={this.state.containerId} />
+          </div>
+          <div className="col-lg-6 select-token">
+            <button type="button" onClick={this.onClickABCT}>ABCT</button>
+            <button type="button" onClick={this.onClickOTBC}>OTBC</button>
+            <button type="button" onClick={this.onClickWIN}>WIN</button>
+          </div>
+        </div>
+
+      </div>
+      
+
       
     );
   }
